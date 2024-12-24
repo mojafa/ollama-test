@@ -1,0 +1,26 @@
+{
+    "name": "Ollama LLM Environment",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11-bullseye",
+    "features": {
+        "ghcr.io/prulloac/devcontainer-features/ollama:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "files.exclude": {
+                    "__pycache__": true
+                }
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.ai-tools",
+                "10nates.ollama-autocoder"
+            ]
+    
+        }
+    },
+    "postStartCommand": "pip3 install --user -r requirements-dev.txt",
+    "remoteUser": "vscode"
+    }
