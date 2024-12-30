@@ -22,5 +22,8 @@
         }
     },
     "postStartCommand": "pip3 install --user -r requirements-dev.txt",
+    "hostRequirements": {
+            "memory": "8gb"
+    },
     "remoteUser": "vscode"
     }
